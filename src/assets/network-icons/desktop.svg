@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="云桌面">
+  <rect x="7" y="8" width="50" height="34" rx="4" fill="#0b2238" stroke="#38d4ff" stroke-width="2.5"/>
+  <path d="M13 15h20M13 20h13" stroke="#6ee7ff" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>
+  <rect x="37" y="15" width="13" height="9" rx="2" fill="#071827" stroke="#38d4ff" stroke-width="1.6"/>
+  <path d="M37 28h13M32 48v6M22 56h20" stroke="#38d4ff" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M26 36l-5 5 5 5M38 36l5 5-5 5" fill="none" stroke="#38d4ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

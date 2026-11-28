@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="防火墙">
+  <path d="M32 5l22 7v18c0 14-9 24-22 29-13-5-22-15-22-29V12z" fill="#0b2238" stroke="#38d4ff" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M18 25h28M18 34h28M18 43h28" stroke="#6ee7ff" stroke-width="1.8" opacity=".8"/>
+  <path d="M25 21v8M39 30v8M25 39v8" stroke="#0b2238" stroke-width="4"/>
+  <path d="M25 21v8M39 30v8M25 39v8" stroke="#38d4ff" stroke-width="1.6"/>
+</svg>
