@@ -4,9 +4,10 @@
 - 日期：2026-11-28
 - 基线 `main`：`623e5be5dc92423971653ec500894ba9d588483b`
 - 功能分支：`feat/netops-v0.1-mvp`
-- 当前 head SHA：`[提交后填写]`（最终以 PR 页面为准）
-- PR 链接：`[提交后填写]`（最终以 PR 页面为准）
-- 合并状态：未合并 `main`；功能与文档已完成，准备 Ready PR
+- 功能提交 head SHA：`a84651f`（`feat: deliver NetOps V0.1 integrated learning MVP`；docs 回填提交后最新 head 以 PR 页面为准）
+- PR 链接：https://github.com/nathanxiangang-web/NetOps/pull/1 （Ready）
+- CI run：https://github.com/nathanxiangang-web/NetOps/actions/runs/46142450429
+- 合并状态：未合并 `main`；Ready PR #1 已创建
 
 ## 目标与完成范围
 
@@ -137,8 +138,8 @@ npm run preview -- --port 8080 --strictPort
 ## 未验证项与待负责人确认
 
 - 8080 由本地 preview 提供，非公网部署；生产托管、域名、HTTPS、缓存策略均未验证。
-- 已提交 `.github/workflows/ci.yml`，jobs 为 `quality`、`test`、`browser`、`safety`、`netops-gate`；GitHub Actions 尚未实际运行。PR 推送后以真实 checks 为准，本文不预填成功；综合检查名为 `netops-gate`，其通过条件是前述 4 个必需 job 全部成功。
-- PR 链接与 head SHA 待提交后填写，最终以 PR 页面为准；本文不伪造运行记录、审批或合并结果。
+- 已提交 `.github/workflows/ci.yml`，jobs 为 `quality`、`test`、`browser`、`safety`、`netops-gate`；已实际运行 [CI run 46142450429](https://github.com/nathanxiangang-web/NetOps/actions/runs/46142450429)，`quality`、`test`、`browser`、`safety`、`netops-gate` 全部 pass。综合检查名为 `netops-gate`，其通过条件是前述 4 个必需 job 全部成功；最新 head 的 checks 以 [PR #1 页面](https://github.com/nathanxiangang-web/NetOps/pull/1) 为准。
+- PR 已创建为 Ready 状态，最新 head 以 PR 页面为准；本文不伪造运行记录、审批或合并结果。
 - 不自行合并 `main`。
 - 图标原始许可文本、27 图逐图覆盖范围、后续课程优先级待负责人确认。
 - 移动端编辑、Firefox/WebKit、真实试学、平台实机实验均未验证。
@@ -150,6 +151,16 @@ npm run preview -- --port 8080 --strictPort
 3. 重新安装与构建：`npm ci && npm run build`。
 4. 无数据库、后端或数据迁移；回退不涉及服务端。
 5. 浏览器侧 `localStorage` 数据可在回退前通过画布列表“导出 JSON”备份；回退或清除站点数据会删除本机画布与阅读记录。
+
+## 可复核链接
+
+| 项目 | 链接/位置 |
+| --- | --- |
+| Ready PR #1 | https://github.com/nathanxiangang-web/NetOps/pull/1 |
+| CI run（46142450429，全部 pass） | https://github.com/nathanxiangang-web/NetOps/actions/runs/46142450429 |
+| 数字签名实验记录 | [lab-results/signature-openssl-3.0.13.txt](lab-results/signature-openssl-3.0.13.txt) |
+| 验收截图目录 | [screenshots/](screenshots/)（9 个文件） |
+| 本地 preview | `http://127.0.0.1:8080/`（本机 preview，非公网部署） |
 
 ## 验收入口与建议体验路径
 

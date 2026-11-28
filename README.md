@@ -6,7 +6,7 @@ NetOps 是中文优先的网络拓扑学习与个人知识整理网站：用独�
 
 ## 当前状态
 
-V0.1 初始集成 MVP 已在本地完成实现与验证，功能按真实边界交付；功能与文档已完成，当前位于功能分支 `feat/netops-v0.1-mvp`，准备一次 Ready PR；尚未合并 `main`。后续按负责人实际体验迭代 Bug、课程与体验细节。
+V0.1 初始集成 MVP 已完成实现与本地验证，功能按真实边界交付；功能提交为 `a84651f`（`feat: deliver NetOps V0.1 integrated learning MVP`），位于功能分支 `feat/netops-v0.1-mvp`。Ready PR [#1](https://github.com/nathanxiangang-web/NetOps/pull/1) 已创建，该 PR 的 [CI run 46142450429](https://github.com/nathanxiangang-web/NetOps/actions/runs/46142450429) 中 `quality`、`test`、`browser`、`safety`、`netops-gate` 全部通过；**尚未合并 `main`**。后续按负责人实际体验迭代 Bug、课程与体验细节。
 
 本版已实现的核心闭环：
 
