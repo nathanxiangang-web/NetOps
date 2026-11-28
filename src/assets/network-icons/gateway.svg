@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="跨域交换网关">
+  <rect x="5" y="10" width="22" height="44" rx="3" fill="#071827" stroke="#38d4ff" stroke-width="2.2"/>
+  <rect x="37" y="10" width="22" height="44" rx="3" fill="#0b2238" stroke="#6ee7ff" stroke-width="2.2"/>
+  <path d="M32 8v48" stroke="#38d4ff" stroke-width="2" stroke-dasharray="3 4"/>
+  <path d="M21 27h22M21 37h22" stroke="#38d4ff" stroke-width="2" stroke-linecap="round"/>
+  <path d="M39 23l4 4-4 4M25 41l-4-4 4-4" fill="none" stroke="#38d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="32" r="3" fill="#38d4ff"/>
+</svg>

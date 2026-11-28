@@ -1,0 +1,49 @@
+NetOps 数字签名实验真实执行记录
+命令：repo/scripts/verify-signature-lab.sh
+日期：2026-11-28
+环境：OpenSSL 3.0.13（Linux 隔离主机）
+数据：临时合成 payload，脚本退出后自动清理；证书与密钥均为运行期临时生成
+密钥说明：只使用临时合成密钥，无真实私钥，未写入仓库
+复现：连续两次运行四项判定与 SHA-256 一致；attime 数值随执行时刻变化
+----------------------------------------------------------------
+
+== NetOps 数字签名实验（OpenSSL 3.0.13）==
+数据：临时合成文件，退出后自动清理，不包含真实私钥
+
+[1/4] 原文验签
+$ openssl dgst -sha256 -verify signer.pub -signature payload.sig payload.bin
+Verified OK
+判定：PASS（原文验签成功）
+
+[2/4] 篡改文件验签
+$ openssl dgst -sha256 -verify signer.pub -signature payload.sig payload-tampered.bin
+error:02000068:rsa routines:ossl_rsa_verify:bad signature:../crypto/rsa/rsa_sign.c:430:
+error:1C880004:Provider routines:rsa_verify:RSA lib:../providers/implementations/signature/rsa_sig.c:774:
+Verification failure
+判定：PASS（篡改被识别为 bad signature）
+
+[3/4] 错误公钥验签
+$ openssl dgst -sha256 -verify wrong.pub -signature payload.sig payload.bin
+error:0200008A:rsa routines:RSA_padding_check_PKCS1_type_1:invalid padding:../crypto/rsa/rsa_pk1.c:79:
+error:02000072:rsa routines:rsa_ossl_public_decrypt:padding check failed:../crypto/rsa/rsa_ossl.c:697:
+error:1C880004:Provider routines:rsa_verify:RSA lib:../providers/implementations/signature/rsa_sig.c:774:
+Verification failure
+判定：PASS（错误公钥被识别为 invalid padding）
+
+[4/4] 证书链有效期检查（当前有效，+370 天过期）
+$ openssl verify -CAfile signer.crt signer.crt
+signer.crt: OK
+$ openssl verify -CAfile signer.crt -attime 1827834039 signer.crt
+CN = Demo Signer, O = Example Lab
+error 10 at 0 depth lookup: certificate has expired
+error signer.crt: verification failed
+判定：PASS（当前证书有效，+370 天证书链检查显示过期）
+
+== SHA-256 ==
+89fe08cf035a427a3247910c80bff5bed03b7f0ef09ce8a5ee9b76e0cfddd977  payload.bin
+bf56849711d9001ddc7b38c6f57a5271d673e24542abc55c8ad826469d4d00a0  payload-tampered.bin
+
+== 汇总 ==
+通过: 4 失败: 0
+演示成功：dgst 只验证签名数学关系；有效期与证书链由 openssl verify 单独检查。
+原始验签返回码: 0，篡改返回码: 1，错误公钥返回码: 1，过期检查返回码: 2

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="二层交换机">
+  <rect x="7" y="21" width="50" height="22" rx="4" fill="#0b2238" stroke="#38d4ff" stroke-width="2.5"/>
+  <path d="M13 37h4M21 37h4M29 37h4M37 37h4M45 37h4" stroke="#6ee7ff" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M19 28l5-4M24 24l1 5M45 28l-5-4M40 24l-1 5" fill="none" stroke="#38d4ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 21V15M28 18l4-3 4 3" fill="none" stroke="#38d4ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
